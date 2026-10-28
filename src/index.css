@@ -1,0 +1,241 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  font-weight: 400;
+  color: #172522;
+  background: #f4f7f6;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #f4f7f6;
+}
+
+.app-header {
+  border-bottom: 1px solid #dfe7e4;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+}
+
+.app-header-inner {
+  min-height: 62px;
+}
+
+.search-panel {
+  padding: 12px;
+  border: 1px solid #dfe7e4;
+  border-radius: 9px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(27, 55, 48, 0.035);
+}
+
+.search-input,
+.login-input,
+.search-filter-control,
+.search-filter-field input {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #d5dfdc;
+  border-radius: 6px;
+  background: #fff;
+  color: #172522;
+  outline: none;
+  transition:
+    border-color 120ms ease,
+    box-shadow 120ms ease;
+}
+
+.search-input {
+  height: 42px;
+  padding: 0 12px;
+  font-size: 14px;
+}
+
+.search-input::placeholder,
+.login-input::placeholder,
+.search-filter-field input::placeholder {
+  color: #899793;
+}
+
+.search-input:focus,
+.login-input:focus,
+.search-filter-control:focus,
+.search-filter-field input:focus {
+  border-color: #27816c;
+  box-shadow: 0 0 0 3px rgba(39, 129, 108, 0.12);
+}
+
+.search-filter-button,
+.search-submit {
+  min-height: 42px;
+  padding: 0 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  transition:
+    background-color 120ms ease,
+    border-color 120ms ease;
+}
+
+.search-filter-button {
+  border: 1px solid #d5dfdc;
+  background: #fff;
+  color: #344640;
+}
+
+.search-filter-button:hover {
+  border-color: #aebdb8;
+  background: #f6f9f8;
+}
+
+.search-submit {
+  border: 1px solid #176a57;
+  background: #176a57;
+  color: #fff;
+}
+
+.search-submit:hover:not(:disabled) {
+  background: #105544;
+}
+
+.search-submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.search-filter-panel {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+  padding: 12px;
+  border: 1px solid #e3ebe8;
+  border-radius: 6px;
+  background: #f8faf9;
+}
+
+.search-filter-field,
+.search-filter-panel > div {
+  min-width: 0;
+}
+
+.search-filter-field label,
+.search-filter-label {
+  display: block;
+  margin-bottom: 5px;
+  color: #52635d;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.search-filter-field input,
+.search-filter-control {
+  box-sizing: border-box;
+  height: 34px;
+  padding: 0 9px;
+  font-size: 12px;
+}
+
+.video-card {
+  border: 1px solid #dfe7e4;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(27, 55, 48, 0.035);
+  transition:
+    border-color 120ms ease,
+    box-shadow 120ms ease;
+}
+
+.video-card:hover {
+  border-color: #b7cbc4;
+  box-shadow: 0 5px 16px rgba(27, 55, 48, 0.08);
+}
+
+.login-form {
+  padding: 22px;
+  border: 1px solid #dfe7e4;
+  border-radius: 9px;
+  background: #fff;
+  box-shadow: 0 10px 32px rgba(27, 55, 48, 0.08);
+}
+
+.login-input {
+  box-sizing: border-box;
+  height: 42px;
+  padding: 0 12px;
+  font-size: 14px;
+}
+
+.login-mark {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  margin: 0 auto 12px;
+  border-radius: 8px;
+  background: #176a57;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.settings-page [class~="bg-gray-900"] {
+  border-color: #dfe7e4 !important;
+  background-color: #fff !important;
+}
+
+.settings-page [class~="bg-gray-800/30"],
+.settings-page [class~="bg-gray-800/50"] {
+  border-color: #e3ebe8 !important;
+  background-color: #f7faf8 !important;
+}
+
+.settings-page [class~="bg-gray-800"] {
+  border-color: #d5dfdc !important;
+  background-color: #f5f8f7 !important;
+}
+
+.settings-page [class~="border-gray-800"],
+.settings-page [class~="border-gray-700"] {
+  border-color: #dfe7e4 !important;
+}
+
+.settings-page [class~="text-white"] {
+  color: #172522 !important;
+}
+
+.settings-page [class~="text-gray-100"],
+.settings-page [class~="text-gray-300"] {
+  color: #344640 !important;
+}
+
+.settings-page [class~="text-gray-400"],
+.settings-page [class~="text-gray-500"] {
+  color: #64736e !important;
+}
+
+@media (max-width: 640px) {
+  .app-header-inner {
+    min-height: 56px;
+    gap: 8px;
+  }
+
+  .app-header-inner > span {
+    display: none;
+  }
+
+  .search-filter-panel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
