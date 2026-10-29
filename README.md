@@ -79,3 +79,9 @@ npm run lint   # Run ESLint
 - User creation and password-changing controls are currently disabled in the interface and backend.
 - Search requests require authentication and at least one valid YouTube API key saved for the user.
 - YouTube API quota and key restrictions apply to searches and key verification.
+
+## Contact
+
+Ehimwinriabe Eghosa - [eghosajosh@gmail.com](mailto:eghosajosh@gmail.com)
+
+Author Portfolio: [https://www.eghosa.site](https://www.eghosa.site)
